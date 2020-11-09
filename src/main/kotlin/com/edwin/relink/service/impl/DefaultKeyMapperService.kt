@@ -15,7 +15,7 @@ class DefaultKeyMapperService : KeyMapperService {
 
     @Transactional
     override fun add(link: String): String {
-        val charPool = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890-_".toCharArray()
+        val charPool = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM".toCharArray()
         val randomString = (1..7)
                 .map { i -> kotlin.random.Random.nextInt(0, charPool.size) }
                 .map(charPool::get)
